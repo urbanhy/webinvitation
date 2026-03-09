@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Naver Map Test</title>
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+  <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=uv8ma7xejm"></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    var map = new naver.maps.Map('map', {
+      center: new naver.maps.LatLng(37.5665, 126.9780),
+      zoom: 15
+    });
+  </script>
+</body>
+</html>
