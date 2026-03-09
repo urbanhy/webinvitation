@@ -25,7 +25,7 @@
   --cream:   #f6f1e8;
   --offwhite:#fafaf7;
   --text:    #e8e4dc;
-  --muted:   rgba(232,228,220,0.5);
+  --muted:   rgba(232,228,220,0.82);
   --ink:     #1a1c24;
 }
 html { scroll-behavior: smooth; }
@@ -220,7 +220,7 @@ body::after {
   line-height: 1.2;
 }
 .hero-meta-item-sub {
-  font-size: 12px; color: var(--muted);
+  font-size: 12px; color: rgba(255,255,255,0.75);
   margin-top: 3px;
 }
 
@@ -306,7 +306,7 @@ body::after {
 .invite-body {
   margin-top: 28px;
   font-size: 16px;
-  color: rgba(232,228,220,0.72);
+  color: rgba(232,228,220,0.92);
   line-height: 2.1;
   font-weight: 300;
 }
@@ -406,7 +406,7 @@ body::after {
   font-size: 22px; font-weight: 600; color: #fff;
 }
 .tl-time-pm {
-  font-size: 11px; color: var(--muted);
+  font-size: 11px; color: rgba(255,255,255,0.7);
   letter-spacing: 0.1em; display: block; margin-top: 2px;
 }
 
@@ -468,7 +468,7 @@ body::after {
   line-height: 1.4; margin-bottom: 8px;
 }
 .tl-card-desc {
-  font-size: 14px; color: var(--muted);
+  font-size: 14px; color: rgba(232,228,220,0.88);
   line-height: 1.7;
 }
 .tl-card-speaker {
@@ -488,7 +488,7 @@ body::after {
   background: rgba(196,151,62,0.05);
   border-left: 2px solid rgba(196,151,62,0.4);
   border-radius: 0 10px 10px 0;
-  font-size: 13px; color: var(--muted);
+  font-size: 13px; color: rgba(232,228,220,0.8);
 }
 
 /* ══════════════════════════════════════════════
@@ -533,7 +533,7 @@ body::after {
   box-shadow: 0 32px 80px rgba(0,0,0,0.5);
 }
 #map {
-  width: 100%; height: 340px;
+  width: 100%; height: 380px;
   background: #1a1d27;
   display: block;
 }
@@ -603,7 +603,7 @@ body::after {
   border: 1px solid rgba(196,151,62,0.2);
 }
 .transport-block p {
-  font-size: 13.5px; color: var(--muted);
+  font-size: 13.5px; color: rgba(232,228,220,0.88);
   margin-bottom: 6px; line-height: 1.6;
 }
 .transport-block p:last-of-type { margin-bottom: 0; }
@@ -646,7 +646,7 @@ body::after {
   margin: 24px 0 20px;
 }
 .cta-subtitle {
-  font-size: 16px; color: var(--muted);
+  font-size: 16px; color: rgba(232,228,220,0.85);
   font-weight: 300; margin-bottom: 0;
   line-height: 1.8;
 }
@@ -673,7 +673,7 @@ body::after {
   opacity: 0.5;
 }
 .footer-text {
-  font-size: 13px; color: rgba(232,228,220,0.3);
+  font-size: 13px; color: rgba(232,228,220,0.65);
   text-align: center; line-height: 1.9;
 }
 
@@ -938,7 +938,7 @@ body::after {
           </div>
           <div class="venue-info-row">
             <div class="venue-info-row-key">Parking</div>
-            <div class="venue-info-row-val">시청 내 주차장 이용 가능<br><span style="color:var(--muted);font-size:13px;">대중교통 이용 권장</span></div>
+            <div class="venue-info-row-val">시청 내 주차장 이용 가능<br><span style="color:rgba(232,228,220,0.65);font-size:13px;">대중교통 이용 권장</span></div>
           </div>
         </div>
 
@@ -1018,7 +1018,7 @@ body::after {
     제2차 이매동 발전과 이매역세권 개발 방향 주민설명회<br>
     2026. 03. 28 SAT · PM 14:00 · 성남시청 3층 한누리실
   </p>
-  <p class="footer-text" style="color:rgba(232,228,220,0.2);font-size:12px;">
+  <p class="footer-text" style="color:rgba(232,228,220,0.45);font-size:12px;">
     본 초대장은 웹 기반으로 제작되었으며 모바일·PC 환경에서 모두 열람 가능합니다.
   </p>
 </footer>
@@ -1061,8 +1061,9 @@ body::after {
       const map = new naver.maps.Map('map', {
         center: new naver.maps.LatLng(LAT, LNG),
         zoom: 16,
-        mapTypeControl: false,
-        scaleControl: false,
+        mapTypeControl: true,
+        zoomControl: true,
+        scaleControl: true,
         mapDataControl: false,
       });
       new naver.maps.Marker({
